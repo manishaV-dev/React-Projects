@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(19, 19, 19);
+  color: #ddddddb7;
+  height: 100vh;
+}
+
+.game {
+  max-width: calc(3 * 200px);
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.status {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 35px;
+  border: 2px solid rgba(192, 247, 180, 0.381);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  background-color: rgb(36, 36, 36);
+  color: #fff;
 }
 
-.card {
-  padding: 2em;
+.cell:hover{
+    background-color: #5b5b5b;
 }
 
-.read-the-docs {
-  color: #888;
+.resetBtn{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: .7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.resetBtn:hover{
+    opacity: 1;
+}
+
+.winBox{
+    color: #3eff61;
 }
