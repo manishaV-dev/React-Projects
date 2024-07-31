@@ -68,4 +68,15 @@ input {
   background-color: rgb(196, 255, 114);
   color: #1a1a1a;
   font-weight: 600;
+  cursor: pointer;
+}
+
+ul li{
+  list-style: none;
+  text-align: left;
+}
+
+.list-box{
+  background-color: #1a1a1a;
+  padding: 20px 50px;
 }
