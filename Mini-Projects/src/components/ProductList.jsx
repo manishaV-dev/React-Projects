@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Pagination from "./pagination/Pagination";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -48,7 +49,7 @@ function ProductList() {
               ))
             : "Loading..."}
         </ul> */}
-        
+
         {/* 2 */}
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
@@ -62,6 +63,8 @@ function ProductList() {
             ))}
           </ul>
         )}
+
+        <Pagination products={products} />
       </div>
     </>
   );
