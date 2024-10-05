@@ -1,5 +1,6 @@
 import './App.css'
-import ListComponent from './listComponent/ListComponent'
+// import ListComponent from './listComponent/ListComponent'
+import ToggleSwitch from './toggle/ToggleSwitch'
 // import Counter from './counter/Counter'
 // import UserForm from './userForm/UserForm'
 // import FormInputCapitalize from './components/FormInputCapitalize'
@@ -15,7 +16,8 @@ function App() {
       {/* <ProductList /> */}
       {/* <Counter /> */}
       {/* <UserForm /> */}
-      <ListComponent />
+      {/* <ListComponent /> */}
+      <ToggleSwitch /> 
     </>
   )
 }
