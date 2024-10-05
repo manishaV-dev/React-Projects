@@ -58,6 +58,7 @@ input {
   padding: 10px 8px;
   border: none;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .submitBtn {
