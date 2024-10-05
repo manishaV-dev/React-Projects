@@ -1,12 +1,16 @@
-import './App.css'
+import { Container, Typography } from "@mui/material";
+import "./App.css";
 
 function App() {
-
   return (
     <>
-      <h1>Habit Tracker using Redux-toolkit</h1>
+      <Container maxWidth="md">
+        <Typography component="h1" variant="h2" align="center">
+          Habit Tracker
+        </Typography>
+      </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
