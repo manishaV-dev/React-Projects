@@ -1,4 +1,5 @@
 import './App.css'
+import FetchData from './fetchData/FetchData'
 // import ListComponent from './listComponent/ListComponent'
 import ToggleSwitch from './toggle/ToggleSwitch'
 // import Counter from './counter/Counter'
@@ -17,7 +18,8 @@ function App() {
       {/* <Counter /> */}
       {/* <UserForm /> */}
       {/* <ListComponent /> */}
-      <ToggleSwitch /> 
+      {/* <ToggleSwitch />  */}
+      <FetchData />
     </>
   )
 }
