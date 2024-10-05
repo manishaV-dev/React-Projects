@@ -1,7 +1,8 @@
 import './App.css'
-import FormInputCapitalize from './components/FormInputCapitalize'
-import ProductList from './components/ProductList'
-import ShuffleList from './components/ShuffleList'
+import Counter from './counter/Counter'
+// import FormInputCapitalize from './components/FormInputCapitalize'
+// import ProductList from './components/ProductList'
+// import ShuffleList from './components/ShuffleList'
 
 function App() {
 
@@ -9,7 +10,8 @@ function App() {
     <>
       {/* <FormInputCapitalize /> */}
       {/* <ShuffleList /> */}
-      <ProductList />
+      {/* <ProductList /> */}
+      <Counter />
     </>
   )
 }
