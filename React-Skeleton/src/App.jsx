@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+import "./App.css";
+import Skeleton from "./skeleton/Skeleton";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <h1>React Skeleton Loading...</h1>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h2>Heading Skeleton</h2>
+        <div className="skeleton-container">
+          <Skeleton width={`200px`} height={`38px`} />
+          <Skeleton width={`150px`} height={`28px`} />
+          <Skeleton width={`100px`} height={`25px`} />
+        </div>
+        <h2>Content Skeleton</h2>
+        <div className="content-skeleton">
+          <div className="skeleton-container">
+            <Skeleton width={`300px`} height={`28px`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton width={`50%`} height={`18px`} variant={`paragraph`} />
+          </div>
+
+          <div className="skeleton-container">
+            <Skeleton width={`300px`} height={`28px`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton width={`50%`} height={`18px`} variant={`paragraph`} />
+          </div>
+
+          <div className="skeleton-container">
+            <Skeleton width={`300px`} height={`28px`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton height={`12px`} variant={`paragraph`} />
+            <Skeleton width={`50%`} height={`18px`} variant={`paragraph`} />
+          </div>
+          
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
