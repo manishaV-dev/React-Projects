@@ -42,7 +42,26 @@ function App() {
             <Skeleton height={`12px`} variant={`paragraph`} />
             <Skeleton width={`50%`} height={`18px`} variant={`paragraph`} />
           </div>
-          
+        </div>
+
+        <h2>Card Skeleton</h2>
+        <div className="cardBlock">
+          <div className="cardSkeleton">
+            <div className="cardImage">
+              <Skeleton width={`80px`} height={`80px`} variant={`circle`} />
+              <Skeleton width={`100%`} height={`20px`} />
+            </div>
+
+            <div className="cardTitle">
+              <Skeleton width={`100%`} height={`30px`} />
+            </div>
+
+            <div className="cardBody">
+              <Skeleton width={`250px`} height={`300px`} />
+            </div>
+
+
+          </div>
         </div>
       </div>
     </>
