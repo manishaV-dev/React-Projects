@@ -62,6 +62,57 @@ function App() {
 
 
           </div>
+
+          <div className="cardSkeleton">
+            <div className="cardImage">
+              <Skeleton width={`80px`} height={`80px`} variant={`circle`} />
+              <Skeleton width={`100%`} height={`20px`} />
+            </div>
+
+            <div className="cardTitle">
+              <Skeleton width={`100%`} height={`30px`} />
+            </div>
+
+            <div className="cardBody">
+              <Skeleton width={`250px`} height={`300px`} />
+            </div>
+
+
+          </div>
+
+          <div className="cardSkeleton">
+            <div className="cardImage">
+              <Skeleton width={`80px`} height={`80px`} variant={`circle`} />
+              <Skeleton width={`100%`} height={`20px`} />
+            </div>
+
+            <div className="cardTitle">
+              <Skeleton width={`100%`} height={`30px`} />
+            </div>
+
+            <div className="cardBody">
+              <Skeleton width={`250px`} height={`300px`} />
+            </div>
+
+
+          </div>
+
+          <div className="cardSkeleton">
+            <div className="cardImage">
+              <Skeleton width={`80px`} height={`80px`} variant={`circle`} />
+              <Skeleton width={`100%`} height={`20px`} />
+            </div>
+
+            <div className="cardTitle">
+              <Skeleton width={`100%`} height={`30px`} />
+            </div>
+
+            <div className="cardBody">
+              <Skeleton width={`250px`} height={`300px`} />
+            </div>
+
+
+          </div>
         </div>
       </div>
     </>
