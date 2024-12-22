@@ -21,7 +21,7 @@
   display: block !important;
 }
 
-.content-skeleton {
+.contentBlock {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -51,10 +51,4 @@
 .cardImage > img {
   background: #000;
   border-radius: 50%;
-}
-
-@media (min-width: 600px) {
-  .content-skeleton {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
