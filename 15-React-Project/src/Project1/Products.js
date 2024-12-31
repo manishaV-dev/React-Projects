@@ -58,7 +58,7 @@ export const products = [
   {
     productName: "Heart Baloon ",
     productImage: "../assets/heart.png",
-    productDescription: "Beautiful gift box full of heart shape baloon",
+    productDescription: "Beautiful gift box full of baloon",
     productPrice: "21.84",
     stock: false,
   },

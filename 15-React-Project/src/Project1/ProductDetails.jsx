@@ -10,6 +10,7 @@ function ProductDetails({ productObj }) {
     <>
       <div className="product">
         <img src={productImage} alt={productName} />
+
         <div className="product-about">
           <h4> {productName} </h4>
           <p className="price">$ {productPrice}</p>
