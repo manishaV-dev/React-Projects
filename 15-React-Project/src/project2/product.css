@@ -1,69 +1,29 @@
-header h2 {
-    width: 100%;
-    background-color: #547e58;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
-  
-  .footer {
-    position: fixed;
-    background: #475952;
-    width: 100%;
-    bottom: 0;
-    padding: 5px;
-    text-align: center;
-  }
-  
-  main {
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  section.products {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .product {
-    background: #242424;
-    margin: 10px;
-    border: 1px solid #4d4d4d;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  .product-about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  
-  .product h4 {
-    color: rgb(253, 224, 136);
-    text-align: center;
-  }
-  
-  .product-details {
-    font-size: 13px;
-    margin-top: 15px;
-    font-weight: 300;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.product-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product {
+  text-align: center;
+  width: 20rem;
+  background: #3b3b3b;
+  padding: 20px;
+}
+
+h5.title {
+  margin-bottom: 20px;
+  color: #e5dc6b;
+  font-weight: 400;
+}
+
+p.count{
+    margin-top: 20px;
     margin-bottom: 20px;
-  }
-  
-  .price {
-    color: #94ff94;
-    font-weight: 300;
-  }
-  
-  button.outStock {
-    background: #504f4f;
-    cursor: not-allowed;
-  }
-  
+}
