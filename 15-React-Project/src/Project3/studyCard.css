@@ -6,6 +6,12 @@
   margin: 0 auto;
 }
 
+h2{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 40px;
+    color: hsl(119, 100%, 74%);
+}
 
 @media (min-width: 1200px) {
   .card-grid {
@@ -48,7 +54,7 @@
 }
 
 .card.active {
-  background-color: #4a90e2;
+  background-color: #32842ceb;
   color: white;
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
