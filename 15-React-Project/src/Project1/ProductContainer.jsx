@@ -6,11 +6,15 @@ function ProductContainer() {
   return (
     <>
       <main>
-        <section className="products">
-          {products.map((product, index) => (
-            <ProductDetails productObj={product} key={index} />
-          ))}
-        </section>
+        {products && products.length > 0 ? (
+          <section className="products">
+            {products.map((product, index) => (
+              <ProductDetails productObj={product} key={index} />
+            ))}
+          </section>
+        ) : (
+          <p>No Product Available</p>
+        )}
       </main>
     </>
   );
