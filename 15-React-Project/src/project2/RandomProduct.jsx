@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./product.css";
+import CountMessage from "./CountMessage";
 
 function RandomProduct() {
   const [productTitle, setProductTitle] = useState("");
@@ -48,9 +49,7 @@ function RandomProduct() {
           {error && <p className="error-message">{error}</p>}
           <h5 className="title">{productTitle}</h5>
           {productImage && <img src={productImage} alt={productTitle} />}
-          <p className="count">
-            You have seen {count} product{count !== 1 && "s"}
-          </p>
+          <CountMessage count={count} />
           {loading ? (
             <button>Loading...</button>
           ) : (
