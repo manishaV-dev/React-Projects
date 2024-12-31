@@ -61,3 +61,8 @@ section.products {
   color: #94ff94;
   font-weight: 300;
 }
+
+button.outStock {
+  background: #504f4f;
+  cursor: not-allowed;
+}
