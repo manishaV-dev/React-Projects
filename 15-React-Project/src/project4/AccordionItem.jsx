@@ -1,17 +1,19 @@
 import React from "react";
 
-function AccordionItem() {
+function AccordionItem({ item, number }) {
   return (
     <>
       <div className="accordion">
         <div className="accordion-header">
           <span className="accordion-icon">+</span>
-          <span className="accordion-number">01</span>
-          <span className="accordion-title">What is Javascript</span>
+          <span className="accordion-number">
+            {number < 9 ? `0${number + 1}` : number + 1}
+          </span>
+          <span className="accordion-title">{item.question}</span>
         </div>
 
         <div className="accordion-content">
-          <p>It is high level programming language</p>
+          <p>{item.answer}</p>
         </div>
       </div>
     </>
