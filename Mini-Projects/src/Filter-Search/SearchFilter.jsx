@@ -50,9 +50,16 @@ const SearchFilter = () => {
         ))} */}
 
         {/* 6 */}
-        {fruitDataFiltered.map((fruit) => (
+        {/* {fruitDataFiltered.map((fruit) => (
           <p>{fruit}</p>
-        ))}
+        ))} */}
+
+        {/* 7 -- display a message if no item match in search input */}
+        {fruitDataFiltered.length > 0 ? (
+          fruitDataFiltered.map((fruit, index) => <p key={index}>{fruit}</p>)
+        ) : (
+          <p>No fruits match your search!</p>
+        )}
       </div>
     </>
   );
@@ -70,5 +77,7 @@ export default SearchFilter;
     As the user type into the input, filter the displayed list to include only those items that contain Real-time filtering
 
 3. The list should update as soon as the user type into the search box, without needing to submit.
+
+4. Display a friendly message if no item match the search item
 
 */
