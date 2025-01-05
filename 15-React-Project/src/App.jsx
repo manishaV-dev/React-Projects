@@ -1,5 +1,6 @@
 import './App.css'
 import DateCounter from './project-6/DateCounter'
+import DateCounterReducer from './project-6/DateCounterReducer'
 import FriendContainer from './project5/FriendContainer'
 // import Product from './Project1/Product'
 // import RandomProduct from './project2/RandomProduct'
@@ -14,7 +15,8 @@ function App() {
     {/* <StudyCard /> */}
     {/* <Accordion /> */}
     {/* <FriendContainer /> */}
-    <DateCounter />
+    {/* <DateCounter /> */}
+    <DateCounterReducer />
     </>
   )
 }
