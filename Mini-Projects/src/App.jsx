@@ -9,6 +9,7 @@ import FormInputCapitalize from "./components/FormInputCapitalize";
 // import ProductList from './components/ProductList'
 import ShuffleList from "./components/ShuffleList";
 import SearchFilter from "./Filter-Search/SearchFilter";
+import { UseDebounce } from "./useDebounce/useDobounce";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/* <ToggleSwitch />  */}
       {/* <FetchData /> */}
       {/* <Timer /> */}
-      <SearchFilter />
+      {/* <SearchFilter /> */}
+      <UseDebounce />
     </>
   );
 }
