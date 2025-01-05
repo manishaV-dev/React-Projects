@@ -1,16 +1,16 @@
-import './App.css'
-import FetchData from './fetchData/FetchData'
-import Timer from './timer/Timer'
+import "./App.css";
+import FetchData from "./fetchData/FetchData";
+import Timer from "./timer/Timer";
 // import ListComponent from './listComponent/ListComponent'
-import ToggleSwitch from './toggle/ToggleSwitch'
+import ToggleSwitch from "./toggle/ToggleSwitch";
 // import Counter from './counter/Counter'
 // import UserForm from './userForm/UserForm'
-// import FormInputCapitalize from './components/FormInputCapitalize'
+import FormInputCapitalize from "./components/FormInputCapitalize";
 // import ProductList from './components/ProductList'
-// import ShuffleList from './components/ShuffleList'
+import ShuffleList from "./components/ShuffleList";
+import SearchFilter from "./Filter-Search/SearchFilter";
 
 function App() {
-
   return (
     <>
       {/* <FormInputCapitalize /> */}
@@ -21,9 +21,10 @@ function App() {
       {/* <ListComponent /> */}
       {/* <ToggleSwitch />  */}
       {/* <FetchData /> */}
-      <Timer />
+      {/* <Timer /> */}
+      <SearchFilter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
