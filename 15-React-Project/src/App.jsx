@@ -1,4 +1,5 @@
 import './App.css'
+import DateCounter from './project-6/DateCounter'
 import FriendContainer from './project5/FriendContainer'
 // import Product from './Project1/Product'
 // import RandomProduct from './project2/RandomProduct'
@@ -12,7 +13,8 @@ function App() {
     {/* <RandomProduct /> */}
     {/* <StudyCard /> */}
     {/* <Accordion /> */}
-    <FriendContainer />
+    {/* <FriendContainer /> */}
+    <DateCounter />
     </>
   )
 }

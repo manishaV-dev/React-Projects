@@ -1,0 +1,49 @@
+h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.date-container {
+  width: 500px;
+  background: #3d3d3d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.step-container span {
+  display: block;
+  text-transform: uppercase;
+  color: #cdd669;
+  font-weight: 600;
+}
+
+.step-container input {
+  width: 100%;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.counter-container .btn {
+  background-color: #539553;
+  padding: 4px 18px;
+}
+
+.counter-container input {
+  padding: 4px 1px;
+}
+
+.reset-btn {
+  background: #c25151;
+}
