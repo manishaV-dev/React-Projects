@@ -1,6 +1,7 @@
 import './App.css'
 import DateCounter from './project-6/DateCounter'
 import DateCounterReducer from './project-6/DateCounterReducer'
+import CountDownTimer from './project-7/CountDownTimer'
 import FriendContainer from './project5/FriendContainer'
 // import Product from './Project1/Product'
 // import RandomProduct from './project2/RandomProduct'
@@ -16,7 +17,8 @@ function App() {
     {/* <Accordion /> */}
     {/* <FriendContainer /> */}
     {/* <DateCounter /> */}
-    <DateCounterReducer />
+    {/* <DateCounterReducer /> */}
+    <CountDownTimer />
     </>
   )
 }
