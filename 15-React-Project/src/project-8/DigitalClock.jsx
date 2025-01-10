@@ -21,3 +21,15 @@ function DigitalClock() {
 }
 
 export default DigitalClock;
+
+
+/*
+
+Issue with using toLocaleTimeString
+
+1. Performance issue -- It do very expensive calculation - it does not cached result -- if your project is heavy than it is not good way to use clock
+
+2. Format issue -- if you change time zone like Mumbai n all it show diff time format so it is not good for User Experience
+
+
+*/
