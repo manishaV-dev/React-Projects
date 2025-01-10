@@ -19,7 +19,7 @@ function FixTimer() {
   return (
     <>
       <div className="digital-clock">
-        <h3>{date.toLocaleTimeString()}</h3>
+        <h3>{clock.toLocaleTimeString()}</h3>
       </div>
     </>
   );
