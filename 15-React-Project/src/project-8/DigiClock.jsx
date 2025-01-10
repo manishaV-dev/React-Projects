@@ -21,7 +21,6 @@ function DigiClock() {
     // to get 12 hour format
     // if left hand value is zero than assign it 12
     hour = hour % 12 || 12;
-
     result = `${hour}:${minute}:${second} ${ampm}`;
 
     return result;
