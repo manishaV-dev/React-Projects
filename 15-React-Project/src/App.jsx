@@ -4,6 +4,7 @@ import DateCounterReducer from './project-6/DateCounterReducer'
 import CountDownTimer from './project-7/CountDownTimer'
 import DigiClock from './project-8/DigiClock'
 import DigitalClock from './project-8/DigitalClock'
+import WithoutSetInterval from './project-8/WithoutSetInterval'
 import FriendContainer from './project5/FriendContainer'
 // import Product from './Project1/Product'
 // import RandomProduct from './project2/RandomProduct'
@@ -22,7 +23,8 @@ function App() {
     {/* <DateCounterReducer /> */}
     {/* <CountDownTimer /> */}
     {/* <DigitalClock /> */}
-    <DigiClock />
+    {/* <DigiClock /> */}
+    <WithoutSetInterval />
     </>
   )
 }
