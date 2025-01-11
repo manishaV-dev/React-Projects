@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast, ToastContainer, Bounce } from "react-toastify";
+import Users from "./components/Users";
 
 function App() {
   // 2 - Two way binding
@@ -8,6 +9,7 @@ function App() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [users, setUsers] = useState([]);
 
   // 1 - form Handling
   function handleSubmit(e) {
@@ -33,6 +35,9 @@ function App() {
       setError("Password must contain any capital letter");
       return;
     }
+
+    // set previous data plus newly added data
+    setUsers([...users, { username, email, password, confirmPassword }]);
 
     setError("");
     setUsername("");
@@ -135,8 +140,12 @@ function App() {
           </div>
         </div>
 
-        <ToastContainer/>
+        <ToastContainer />
       </div>
+
+      {users.map((user, index) => {
+        return <Users userData={user} key={index} />;
+      })}
     </>
   );
 }
