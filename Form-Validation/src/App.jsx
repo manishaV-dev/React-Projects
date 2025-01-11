@@ -1,7 +1,27 @@
+import { useState } from "react";
+
 function App() {
-  // form Handling
+  // 2 - Two way binding
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+
+  // 1 - form Handling
   function handleSubmit(e) {
     e.preventDefault();
+    // console.log(`Name - ${username}, Email- ${email}`);
+
+    if (password.length < 8) {
+      setError("Password must be 8 characters long");
+      return;
+    }
+
+    setUsername("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
   }
 
   return (
@@ -19,7 +39,10 @@ function App() {
                 </span>
                 <input
                   type="text"
-                  value="tbone"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Manisha Varma"
+                  required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-slate-500"
                 />
@@ -31,7 +54,10 @@ function App() {
                 </span>
                 <input
                   type="email"
-                  value="example@gmail.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="example@gmail.com"
+                  required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-slate-500"
                 />
@@ -43,7 +69,10 @@ function App() {
                 </span>
                 <input
                   type="password"
-                  value="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="******"
+                  required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-slate-500"
                 />
@@ -55,11 +84,18 @@ function App() {
                 </span>
                 <input
                   type="password"
-                  value="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="******"
+                  required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-slate-500"
                 />
               </label>
+
+              {error && (
+                <p className="text-xs text-red-500 font-semibold">{error}</p>
+              )}
 
               <div className="text-center mt-5">
                 <button className="px-6 py-2 rounded-full bg-rose-400 hover:bg-rose-700 text-white">
