@@ -18,10 +18,27 @@ function App() {
       return;
     }
 
+    if (password != confirmPassword) {
+      setError("Password and confirm password must be same");
+      return;
+    }
+
+    if (!/[!@#$%^&*()<>,."]/.test(password)) {
+      setError("Password must contain any special character");
+      return;
+    }
+
+    if (!/[A-Z]/.test(password)) {
+      setError("Password must contain any capital letter");
+      return;
+    }
+
+    setError("");
     setUsername("");
     setEmail("");
     setPassword("");
     setConfirmPassword("");
+    alert("Form Submitted");
   }
 
   return (
