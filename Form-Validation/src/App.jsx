@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast, ToastContainer, Bounce } from "react-toastify";
 
 function App() {
   // 2 - Two way binding
@@ -38,7 +39,18 @@ function App() {
     setEmail("");
     setPassword("");
     setConfirmPassword("");
-    alert("Form Submitted");
+    // alert("Form Submitted");
+    toast.success("😀 Successfully Logged In", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
   }
 
   return (
@@ -122,6 +134,8 @@ function App() {
             </form>
           </div>
         </div>
+
+        <ToastContainer/>
       </div>
     </>
   );
