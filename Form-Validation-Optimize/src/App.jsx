@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast, ToastContainer, Bounce } from "react-toastify";
 import Input from "./components/Input";
 import Users from "./components/Users";
@@ -14,6 +14,27 @@ function App() {
   const [error, setError] = useState("");
   const [users, setUsers] = useState([]);
 
+  // Load formDara from localStorage on initial render
+  useEffect(() => {
+    const savedFormData = localStorage.getItem("form-validation");
+    if (savedFormData) {
+      console.log("Loaded from localStorage:", savedFormData); // Debugging line
+      setFormData(JSON.parse(savedFormData));
+    }
+  }, []);
+
+  // save data to localstorage whenever it changes
+  useEffect(() => {
+    if (
+      formData.username ||
+      formData.email ||
+      formData.password ||
+      formData.confirmPassword
+    ) {
+      console.log("Saving to localStorage:", formData); // Debugging line
+      localStorage.setItem("form-validation", JSON.stringify(formData));
+    }
+  }, [formData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -127,3 +148,49 @@ function App() {
 }
 
 export default App;
+
+/*
+How it Works
+When you type into the form, the formData state is updated via handleChange.
+
+The useEffect with [formData] dependency triggers and saves the updated formData to localStorage.
+
+On page reload, the useEffect with an empty dependency array ([]) loads the saved data into formData.
+
+*/
+
+/*
+on set formData to localStorage -
+
+Overwriting formData on Form Reset:
+
+After a successful form submission (handleSubmit), you reset formData to an empty object. This triggers the useEffect to save the empty object to localStorage, effectively clearing the stored data.
+Fix: Skip saving to localStorage when resetting formData
+
+
+
+This useEffect hook ensures that the formData object is only saved to localStorage when at least one of its properties (username, email, password, or confirmPassword) contains a value (is truthy).
+
+useEffect(() => {
+    if (
+      formData.username ||
+      formData.email ||
+      formData.password ||
+      formData.confirmPassword
+    ) {
+      console.log("Saving to localStorage:", formData); // Debugging line
+      localStorage.setItem("form-validation", JSON.stringify(formData));
+    }
+  }, [formData]);
+
+
+
+
+
+  If you want to dynamically check for non-empty fields, you can replace the explicit if condition with a more flexible check:
+
+if (Object.values(formData).some((value) => value.trim() !== "")) {
+  localStorage.setItem("form-validation", JSON.stringify(formData));
+}
+
+  */
