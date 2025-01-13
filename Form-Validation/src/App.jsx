@@ -4,46 +4,82 @@ import Users from "./components/Users";
 
 function App() {
   // 2 - Two way binding
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [username, setUsername] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
+
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
   const [error, setError] = useState("");
   const [users, setUsers] = useState([]);
+
+  // Handle onchange event
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
 
   // 1 - form Handling
   function handleSubmit(e) {
     e.preventDefault();
     // console.log(`Name - ${username}, Email- ${email}`);
 
-    if (password.length < 8) {
+    if (formData.password.length < 8) {
       setError("Password must be 8 characters long");
       return;
     }
 
-    if (password != confirmPassword) {
+    if (formData.password !== formData.confirmPassword) {
       setError("Password and confirm password must be same");
       return;
     }
 
-    if (!/[!@#$%^&*()<>,."]/.test(password)) {
+    if (!/[!@#$%^&*()<>,."]/.test(formData.password)) {
       setError("Password must contain any special character");
       return;
     }
 
-    if (!/[A-Z]/.test(password)) {
+    if (!/[A-Z]/.test(formData.password)) {
       setError("Password must contain any capital letter");
       return;
     }
 
     // set previous data plus newly added data
-    setUsers([...users, { username, email, password, confirmPassword }]);
+    // setUsers([...users, { username, email, password, confirmPassword }]);
+
+    setUsers((prevUser) => [
+      ...prevUser,
+      {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+        confirmPassword: formData.confirmPassword,
+      },
+    ]);
+
+    // setError("");
+    // setUsername("");
+    // setEmail("");
+    // setPassword("");
+    // setConfirmPassword("");
 
     setError("");
-    setUsername("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
+    setFormData({
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
+
     // alert("Form Submitted");
     toast.success("😀 Successfully Logged In", {
       position: "top-right",
@@ -73,8 +109,10 @@ function App() {
                 </span>
                 <input
                   type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={formData.username}
+                  name="username"
+                  // onChange={(e) => setUsername(e.target.value)}
+                  onChange={handleChange}
                   placeholder="Manisha Varma"
                   required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
@@ -88,8 +126,9 @@ function App() {
                 </span>
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData.email}
+                  name="email"
+                  onChange={handleChange}
                   placeholder="example@gmail.com"
                   required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
@@ -103,8 +142,9 @@ function App() {
                 </span>
                 <input
                   type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={formData.password}
+                  name="password"
+                  onChange={handleChange}
                   placeholder="******"
                   required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
@@ -118,8 +158,9 @@ function App() {
                 </span>
                 <input
                   type="password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  value={formData.confirmPassword}
+                  name="confirmPassword"
+                  onChange={handleChange}
                   placeholder="******"
                   required
                   className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
