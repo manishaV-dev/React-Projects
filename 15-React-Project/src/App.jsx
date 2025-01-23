@@ -1,3 +1,4 @@
+import Modal from './09-Modal/Modal'
 import './App.css'
 import DateCounter from './project-6/DateCounter'
 import DateCounterReducer from './project-6/DateCounterReducer'
@@ -24,7 +25,8 @@ function App() {
     {/* <CountDownTimer /> */}
     {/* <DigitalClock /> */}
     {/* <DigiClock /> */}
-    <WithoutSetInterval />
+    {/* <WithoutSetInterval /> */}
+    <Modal />
     </>
   )
 }

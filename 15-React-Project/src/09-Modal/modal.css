@@ -1,0 +1,18 @@
+.modal-container {
+  position: fixed;
+  border: 1px solid #fff;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.modal-container p{
+    text-align: justify;
+}
+
+.modal-container button{
+    margin-top: 15px;
+    background-color: rgb(247, 97, 97);
+}
