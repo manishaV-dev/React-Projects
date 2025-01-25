@@ -1,4 +1,5 @@
 import Modal from './09-Modal/Modal'
+import Timer from './10-Timer/Timer'
 import './App.css'
 import DateCounter from './project-6/DateCounter'
 import DateCounterReducer from './project-6/DateCounterReducer'
@@ -26,7 +27,8 @@ function App() {
     {/* <DigitalClock /> */}
     {/* <DigiClock /> */}
     {/* <WithoutSetInterval /> */}
-    <Modal />
+    {/* <Modal /> */}
+    <Timer />
     </>
   )
 }
