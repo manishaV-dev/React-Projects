@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import useThrottle from "./useThrottle";
 
 const Throttling = () => {
   const [top, setTop] = useState(0);
+  const throttledValue = useThrottle(top, 1000);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +24,7 @@ const Throttling = () => {
           <hr />
           <h2>Normal : {top} </h2>
           <hr />
-          <h2>Throttled: </h2>
+          <h2>Throttled: {throttledValue} </h2>
         </div>
       </div>
     </>
