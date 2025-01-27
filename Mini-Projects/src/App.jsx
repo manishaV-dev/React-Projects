@@ -10,6 +10,7 @@ import FormInputCapitalize from "./components/FormInputCapitalize";
 import ShuffleList from "./components/ShuffleList";
 import SearchFilter from "./Filter-Search/SearchFilter";
 import { UseDebounce } from "./useDebounce/useDobounce";
+import Throttling from "./throttling/Throttling";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <FetchData /> */}
       {/* <Timer /> */}
       {/* <SearchFilter /> */}
-      <UseDebounce />
+      {/* <UseDebounce /> */}
+      <Throttling />
     </>
   );
 }
