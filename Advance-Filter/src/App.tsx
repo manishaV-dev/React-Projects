@@ -1,7 +1,14 @@
+import { BrowserRouter as Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold text-red-600">Hello world</h1>
+      <Routes>
+        <div className="flex h-screen">
+          <Sidebar />
+        </div>
+      </Routes>
     </>
   );
 }
