@@ -1,4 +1,5 @@
 import Modal from './09-Modal/Modal'
+import Star from './10-Star-Rating/Star'
 import Timer from './10-Timer/Timer'
 import './App.css'
 import DateCounter from './project-6/DateCounter'
@@ -28,7 +29,8 @@ function App() {
     {/* <DigiClock /> */}
     {/* <WithoutSetInterval /> */}
     {/* <Modal /> */}
-    <Timer />
+    {/* <Timer /> */}
+    <Star />
     </>
   )
 }

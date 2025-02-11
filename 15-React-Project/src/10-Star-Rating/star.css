@@ -1,0 +1,14 @@
+.allStar {
+  color: gold;
+  font-size: 20px;
+}
+
+.star-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+button{
+    margin: 3px;
+}
