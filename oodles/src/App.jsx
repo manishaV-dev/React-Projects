@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TaskList from "./components/TaskList";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/taskList" element={<TaskList />} />
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
