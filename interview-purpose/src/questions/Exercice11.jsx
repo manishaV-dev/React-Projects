@@ -35,6 +35,7 @@ export default Exercice11;
 
 //   const handleClick = () => {
 //     setItems((prevItems) => [...prevItems, 4]); // Using functional update
+// Creates a new array ([...items, 4]), ensuring React detects the change.
 //   };
 
 //   return (
