@@ -6,7 +6,7 @@ import ToggleSwitch from "./toggle/ToggleSwitch";
 // import Counter from './counter/Counter'
 // import UserForm from './userForm/UserForm'
 import FormInputCapitalize from "./components/FormInputCapitalize";
-// import ProductList from './components/ProductList'
+import ProductList from './components/ProductList'
 import ShuffleList from "./components/ShuffleList";
 import SearchFilter from "./Filter-Search/SearchFilter";
 import { UseDebounce } from "./useDebounce/useDobounce";
@@ -17,7 +17,7 @@ function App() {
     <>
       {/* <FormInputCapitalize /> */}
       {/* <ShuffleList /> */}
-      {/* <ProductList /> */}
+      <ProductList />
       {/* <Counter /> */}
       {/* <UserForm /> */}
       {/* <ListComponent /> */}
@@ -26,7 +26,7 @@ function App() {
       {/* <Timer /> */}
       {/* <SearchFilter /> */}
       {/* <UseDebounce /> */}
-      <Throttling />
+      {/* <Throttling /> */}
     </>
   );
 }
