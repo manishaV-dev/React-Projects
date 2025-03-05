@@ -1,4 +1,5 @@
 import "./App.css";
+import Exercice11 from "./questions/Exercice11";
 import Exercice8 from "./questions/Exercice8";
 import Exercise1 from "./questions/exercise1";
 import Exercise10 from "./questions/Exercise10";
@@ -23,7 +24,8 @@ function App() {
       {/* <Exercise7 /> */}
       {/* <Exercice8 /> */}
       {/* <Exercise9 /> */}
-      <Exercise10 />
+      {/* <Exercise10 /> */}
+      <Exercice11 />
     </>
   );
 }
