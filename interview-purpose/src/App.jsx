@@ -1,5 +1,6 @@
 import "./App.css";
 import Ques from "./newQuestion/Ques";
+import Ques2 from "./newQuestion/Ques2";
 import Exercice11 from "./questions/Exercice11";
 import Exercice8 from "./questions/Exercice8";
 import Exercise1 from "./questions/exercise1";
@@ -27,7 +28,8 @@ function App() {
       {/* <Exercise9 /> */}
       {/* <Exercise10 /> */}
       {/* <Exercice11 /> */}
-      <Ques />
+      {/* <Ques /> */}
+      <Ques2 />
     </>
   );
 }
