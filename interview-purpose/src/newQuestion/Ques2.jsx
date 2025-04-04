@@ -12,13 +12,17 @@ const Ques2 = () => {
 
   const [inputValue, setInputValue] = useState("");
 
-  function handleChange() {
+  function handleClick() {
     setObj({
       ...obj,
       firstName: inputValue,
       address: { ...obj.address, secondLine: inputValue },
     });
+
+    setInputValue(""); // // Clear the input field after updating
   }
+
+
 
   return (
     <div>
@@ -35,7 +39,7 @@ const Ques2 = () => {
       />
       <br />
       <br />
-      <button onClick={handleChange}>Change Value</button>
+      <button onClick={handleClick}>Change Value</button>
     </div>
   );
 };
