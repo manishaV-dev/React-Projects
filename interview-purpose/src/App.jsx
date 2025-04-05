@@ -1,4 +1,5 @@
 import "./App.css";
+import NestMap from "./newQuestion/NestMap";
 import Ques from "./newQuestion/Ques";
 import Ques2 from "./newQuestion/Ques2";
 import Exercice11 from "./questions/Exercice11";
@@ -29,7 +30,8 @@ function App() {
       {/* <Exercise10 /> */}
       {/* <Exercice11 /> */}
       {/* <Ques /> */}
-      <Ques2 />
+      {/* <Ques2 /> */}
+      <NestMap />
     </>
   );
 }
