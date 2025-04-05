@@ -15,6 +15,8 @@ import Exercise6 from "./questions/Exercise6";
 import Exercise7 from "./questions/Exercise7";
 import Exercise9 from "./questions/Exercise9";
 import ChildToParent from "./newQuestion/ChildToParent";
+import Ques3 from "./newQuestion/Ques3";
+import Ques4 from "./newQuestion/Ques4";
 
 function App() {
   // this is for childToParent
@@ -41,8 +43,10 @@ function App() {
       {/* <Ques /> */}
       {/* <Ques2 /> */}
       {/* <NestMap /> */}
-      <h1>{parentState}</h1>
-      <ChildToParent onHandleChange={onHandleChange} />
+      {/* <h1>{parentState}</h1>
+      <ChildToParent onHandleChange={onHandleChange} /> */}
+      {/* <Ques3 /> */}
+      <Ques4 />
     </>
   );
 }
