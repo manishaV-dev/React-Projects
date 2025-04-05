@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import NestMap from "./newQuestion/NestMap";
 import Ques from "./newQuestion/Ques";
@@ -13,8 +14,16 @@ import Exercise5 from "./questions/Exercise5";
 import Exercise6 from "./questions/Exercise6";
 import Exercise7 from "./questions/Exercise7";
 import Exercise9 from "./questions/Exercise9";
+import ChildToParent from "./newQuestion/ChildToParent";
 
 function App() {
+  // this is for childToParent
+  const [parentState, setParentState] = useState("");
+
+  const onHandleChange = (value) => {
+    setParentState(value);
+  };
+
   return (
     <>
       <h1>Interview Purpose</h1>
@@ -31,7 +40,9 @@ function App() {
       {/* <Exercice11 /> */}
       {/* <Ques /> */}
       {/* <Ques2 /> */}
-      <NestMap />
+      {/* <NestMap /> */}
+      <h1>{parentState}</h1>
+      <ChildToParent onHandleChange={onHandleChange} />
     </>
   );
 }
